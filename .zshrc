@@ -94,3 +94,4 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias vi=vim
+alias pacman='pacman --color auto'
