@@ -1,6 +1,6 @@
 # Vim
 ## Use Vundle plugin manager
-Setup [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+Setup [Vundle.vim](https://github.com/VundleVim/Vundle.vim)  
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
 Plugin reference: 
@@ -12,7 +12,7 @@ Plugin reference:
 `curl -sSL https://raw.githubuserusercontent.com/alex81527/configs/master/.vimrc
 -o ~/.vimrc`
 
-open vim, and type :PluginInstall to install plugins.
+open vim, and type `:PluginInstall` to install plugins.
 # Zsh
 ## Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 `sh -c "$(curl -fsSL
