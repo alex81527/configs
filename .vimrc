@@ -119,6 +119,9 @@ set matchtime=2
 "The last window will have a status line 
 set laststatus=2
 
+"Settings for YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
+let g:ycm_confirm_extra_conf = 0
 
 "Recommended settings for syntastic
 set statusline+=%#warningmsg#
