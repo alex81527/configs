@@ -25,11 +25,18 @@ Compiling YCM with semantic support for C-family languages:
     Download sample config from here:  
     `curl -ssL https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py -o ~/.ycm_extra_conf.py`  
     Add these to your .vimrc:  
-    `let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py`  
-    `let g:ycm_confirm_extra_conf = 0` // no confirmation everytime  
+```
+"Settings for YouCompleteMe                                                     
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                        
+"no confirmation for ycm_confirm_extra_conf each time                           
+let g:ycm_confirm_extra_conf = 0                                                
+"debug info, use :YcmToggleLogs stderr to examine errors                        
+let g:ycm_server_keep_logfiles = 1   
+let g:ycm_server_log_level = 'debug'
+ ```
    
-### Syntastic
-### NerdTree
+### Syntastic  
+See [FAQ](https://github.com/vim-syntastic/syntastic#4-faq) section.  
 
 
 # Zsh  
