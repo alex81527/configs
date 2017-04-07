@@ -119,3 +119,17 @@ set matchtime=2
 "The last window will have a status line 
 set laststatus=2
 
+
+"Recommended settings for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:_on_wq = 0
+
+"Custom settings for systastic
+
+"Use this option to specify the height of the location lists that syntastic opens
+let g:syntastic_loc_list_height = 5
