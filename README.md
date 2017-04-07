@@ -4,7 +4,7 @@
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`  
 
 2. Download .vimrc  
-`curl -sSL https://raw.githubuserusercontent.com/alex81527/configs/master/.vimrc
+`curl -sSL https://raw.githubusercontent.com/alex81527/configs/master/.vimrc
 -o ~/.vimrc`  
  open vim, and type `:PluginInstall` to install plugins.  
 
