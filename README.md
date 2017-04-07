@@ -1,24 +1,40 @@
-# Vim
-## Use Vundle plugin manager
-Setup [Vundle.vim](https://github.com/VundleVim/Vundle.vim)  
-`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+# Vim  
+## Use Vundle plugin manager  
+1. Setup [Vundle.vim](https://github.com/VundleVim/Vundle.vim)  
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`  
 
-Plugin reference: 
-* [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-* [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
-* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
-
-## Download .vimrc 
+2. Download .vimrc  
 `curl -sSL https://raw.githubuserusercontent.com/alex81527/configs/master/.vimrc
--o ~/.vimrc`
+-o ~/.vimrc`  
+ open vim, and type `:PluginInstall` to install plugins.  
 
-open vim, and type `:PluginInstall` to install plugins.
-# Zsh
-## Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
+### Plugins:  
+* [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)  
+* [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)  
+* [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)  
+
+## Plugin specific configuration  
+### YouCompleteMe  
+1. Assume YCM is installed by Vundle at `~/.vim/bundle/YouCompleteMe`.  
+2. Compile the `ycm_core` library that YCM needs. Make sure you have `cmake` and `python headers` installed. (In Ubuntu: `sudo apt-get install cmake python-dev python3-dev`)  
+   Compiling YCM with semantic support for C-family languages:  
+  `cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer`  
+3. YCM relies on `libclang`, which requires a set of [compile flags](https://github.com/Valloric/YouCompleteMe#c-family-semantic-completion) in order to parse your code.  
+    Download sample config from here:  
+    `curl -ssL https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py -o ~/.ycm_extra_conf.py`  
+    Add these to your .vimrc:  
+    `let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py`  
+    `let g:ycm_confirm_extra_conf = 0` // no confirmation everytime  
+   
+### Syntastic
+### NerdTree
+
+
+# Zsh  
+## Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).  
 `sh -c "$(curl -fsSL
-https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`  
 
-## Download .zshrc
+## Download .zshrc  
 `curl -sSL https://raw.githubuserusercontent.com/alex81527/configs/master/.zshrc
--o ~/.zshrc`
-
+-o ~/.zshrc`  
