@@ -56,7 +56,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Custom setting starts from here
 "Using :help to walk through each setting, :help tabstop 
 
@@ -119,11 +119,18 @@ set matchtime=2
 "The last window will have a status line 
 set laststatus=2
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Settings for YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
+"no confirmation for ycm_confirm_extra_conf each time
 let g:ycm_confirm_extra_conf = 0
+"debug info, use :YcmToggleLogs stderr to examine errors
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
-"Recommended settings for syntastic
+
+
+"Settings for syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -131,8 +138,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:_on_wq = 0
-
-"Custom settings for systastic
-
-"Use this option to specify the height of the location lists that syntastic opens
+"Use this option to specify the height of the location lists syntastic opens
 let g:syntastic_loc_list_height = 5
+
+
+
+"Settings for NERDTree
+map <F2> :NERDTreeToggle<CR>
