@@ -16,9 +16,10 @@
 ## Plugin specific configuration  
 ### YouCompleteMe  
 1. Assume YCM is installed by Vundle at `~/.vim/bundle/YouCompleteMe`.  
-2. Compile the `ycm_core` library that YCM needs. Make sure you have `cmake` and `python headers` installed. (In Ubuntu: `sudo apt-get install cmake python-dev python3-dev`)  
-   Compiling YCM with semantic support for C-family languages:  
-  `cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer`  
+2. Compile the `ycm_core` library that YCM needs. Make sure you have `cmake` and `python headers` installed.  
+    (In Ubuntu: `sudo apt-get install cmake python-dev python3-dev`)  
+    Compiling YCM with semantic support for C-family languages:  
+    `cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer`  
 3. YCM relies on `libclang`, which requires a set of [compile flags](https://github.com/Valloric/YouCompleteMe#c-family-semantic-completion) in order to parse your code.  
     Download sample config from here:  
     `curl -ssL https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py -o ~/.ycm_extra_conf.py`  
