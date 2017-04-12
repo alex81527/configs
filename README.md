@@ -12,7 +12,9 @@
 * [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)  
 * [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)  
 * [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)  
-
+* [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)  
+* [vim-airline/vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)  
+* [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)  
 ## Plugin specific configuration  
 ### YouCompleteMe  
 1. Assume YCM is installed by Vundle at `~/.vim/bundle/YouCompleteMe`.  
