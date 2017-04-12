@@ -19,8 +19,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-
-"Plugin 'bling/vim-airline'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'kien/ctrlp.vim'
 
 
@@ -67,7 +68,7 @@ set fileencodings=utf-8,big5,default
 "Colorscheme
 syntax on
 set background=dark
-colorscheme desert
+colorscheme molokai 
 
 "Let backspace behaves like most other apps
 "http://vim.wikia.com/wiki/Backspace_and_delete_problems
@@ -119,6 +120,9 @@ set matchtime=2
 "The last window will have a status line 
 set laststatus=2
 
+nmap <C-k> <PageUp>
+nmap <C-j> <PageDown>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Settings for YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
@@ -145,3 +149,18 @@ let g:syntastic_loc_list_height = 5
 
 "Settings for NERDTree
 map <F2> :NERDTreeToggle<CR>
+
+
+
+"Settings for vim-airline
+"This is disabled by default; add the following to your vimrc to enable 
+"the extension:
+let g:airline#extensions#tabline#enabled = 1
+"Separators can be configured independently for the tabline, so here is
+"how you can define 'straight' tabs:
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+"Integrating with powerline fonts
+"Install here: https://github.com/powerline/fonts
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
