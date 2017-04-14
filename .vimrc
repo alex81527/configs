@@ -144,11 +144,19 @@ let g:syntastic_check_on_open = 1
 let g:_on_wq = 0
 "Use this option to specify the height of the location lists syntastic opens
 let g:syntastic_loc_list_height = 5
-
-
-
-"Settings for NERDTree
-map <F2> :NERDTreeToggle<CR>
+"Set checkers, e.g., let g:syntastic_<filetype>_checkers = ['<checker-name>']
+let g:syntastic_c_checkers = ['gcc']
+"for cpp, it defaults to g++, or clang++ if gcc not found
+let g:syntastic_python_checkers = ['pylint']
+"For python 2.7, let g:syntastic_python_checkers = ['pylint2']
+"
+"Syntastic can be used together with the 'YouCompleteMe' Vim plugin (see         
+"http://valloric.github.io/YouCompleteMe/). However, by default 'YouCompleteMe'  
+"disables syntastic's checkers for the 'c', 'cpp', 'objc', and 'objcpp'          
+"filetypes, in order to allow its own checkers to run. If you want to use YCM's  
+"identifier completer but still run syntastic's checkers for those filetypes you 
+"have to set g:ycm_show_diagnostics_ui to 0.  
+let g:ycm_show_diagnostics_ui = 0
 
 
 
@@ -164,3 +172,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "Install here: https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
+
+
+
+"Settings for NERDTree
+map <F2> :NERDTreeToggle<CR>
