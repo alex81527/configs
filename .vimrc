@@ -147,6 +147,7 @@ let g:syntastic_loc_list_height = 5
 "Set checkers, e.g., let g:syntastic_<filetype>_checkers = ['<checker-name>']
 let g:syntastic_c_checkers = ['gcc']
 "for cpp, it defaults to g++, or clang++ if gcc not found
+let g:syntastic_sh_checkers = ['bashate']
 let g:syntastic_python_checkers = ['pylint']
 "For python 2.7, let g:syntastic_python_checkers = ['pylint2']
 "
