@@ -1,6 +1,7 @@
 "Author: W. Alex Chen 
-"Date:   April 3, 2017
+"Date:   April 15, 2017 UTC+8 
 "Email:  alex81527@gmail.com
+"Github: http://github.com/alex81527
 
 
 set nocompatible              " be iMproved, required
@@ -123,18 +124,20 @@ set laststatus=2
 nmap <C-k> <PageUp>
 nmap <C-j> <PageDown>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Settings for YouCompleteMe
+
+
+"Settings for YouCompleteMe"""""""""""""""""""'"""""""""""""""""""""""""
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
 "no confirmation for ycm_confirm_extra_conf each time
 let g:ycm_confirm_extra_conf = 0
 "debug info, use :YcmToggleLogs stderr to examine errors
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
-"Settings for syntastic
+"Settings for syntastic"""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -142,15 +145,17 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:_on_wq = 0
+
 "Use this option to specify the height of the location lists syntastic opens
-let g:syntastic_loc_list_height = 5
+"let g:syntastic_loc_list_height = 5
+
 "Set checkers, e.g., let g:syntastic_<filetype>_checkers = ['<checker-name>']
 let g:syntastic_c_checkers = ['gcc']
 "for cpp, it defaults to g++, or clang++ if gcc not found
-let g:syntastic_sh_checkers = ['bashate']
+let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_python_checkers = ['pylint']
 "For python 2.7, let g:syntastic_python_checkers = ['pylint2']
-"
+
 "Syntastic can be used together with the 'YouCompleteMe' Vim plugin (see         
 "http://valloric.github.io/YouCompleteMe/). However, by default 'YouCompleteMe'  
 "disables syntastic's checkers for the 'c', 'cpp', 'objc', and 'objcpp'          
@@ -158,10 +163,14 @@ let g:syntastic_python_checkers = ['pylint']
 "identifier completer but still run syntastic's checkers for those filetypes you 
 "have to set g:ycm_show_diagnostics_ui to 0.  
 let g:ycm_show_diagnostics_ui = 0
+"For debugging, set to 0 for not logging
+"let g:syntastic_debug = 3
+"let g:syntastic_debug_file = "~/syntastic_debug"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
-"Settings for vim-airline
+"Settings for vim-airline"""""""""""""""""""""""""""""""""""""""""""""""
 "This is disabled by default; add the following to your vimrc to enable 
 "the extension:
 let g:airline#extensions#tabline#enabled = 1
@@ -169,12 +178,15 @@ let g:airline#extensions#tabline#enabled = 1
 "how you can define 'straight' tabs:
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
 "Integrating with powerline fonts
 "Install here: https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
-"Settings for NERDTree
+"Settings for NERDTree""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F2> :NERDTreeToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
