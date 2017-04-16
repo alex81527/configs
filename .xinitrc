@@ -7,4 +7,4 @@ gcin &
 
 pgrep redshift &> /dev/null || redshift &> /dev/null &
 
-exec startdde
+exec gnome-session

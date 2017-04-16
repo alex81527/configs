@@ -147,7 +147,7 @@ let g:syntastic_check_on_open = 1
 let g:_on_wq = 0
 
 "Use this option to specify the height of the location lists syntastic opens
-"let g:syntastic_loc_list_height = 5
+let g:syntastic_loc_list_height = 7
 
 "Set checkers, e.g., let g:syntastic_<filetype>_checkers = ['<checker-name>']
 let g:syntastic_c_checkers = ['gcc']
