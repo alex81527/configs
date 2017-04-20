@@ -34,5 +34,5 @@ let g:ycm_confirm_extra_conf = 0
 `sh -c "$(curl -fsSL
 https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`  
 * Download .zshrc  
-`curl -sSL https://raw.githubuserusercontent.com/alex81527/configs/master/.zshrc
+`curl -sSL https://raw.githubusercontent.com/alex81527/configs/master/.zshrc
 -o ~/.zshrc`  
