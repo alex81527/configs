@@ -1,6 +1,6 @@
 # Vim  
 ### Quick setup 
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/alex81527/configs/master/vim-setup.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/alex81527/configs/master/vim-setup.sh)"`
 
 ### Plugins:  
 * [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe) auto completion  
