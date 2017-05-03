@@ -14,8 +14,10 @@ curl -sSL http://cscope.sourceforge.net/cscope_maps.vim \
 echo '[~/.vim/plugin/cscope_maps.vim] updated.'
 
 echo 'Installing vim plugins...'
-vim +PluginInstall +qall
-
+# Use an empty vimrc to avoid errors before plugins are installed
+touch tmprc
+vim -u tmprc +PluginInstall +qall
+rm -f tmprc
 
 echo 'Install powerline fonts for vim-airline plugin...'
 mkdir -p ~/AUR_PKG
