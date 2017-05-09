@@ -32,16 +32,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-#############################################
-# Add custom settings down below ############
-#############################################
+#######################################################
+########### Add custom settings down below ############
+#######################################################
 export LC_CTYPE="zh_TW.UTF-8"
 
 export XMODIFIERS=@im=gcin
 export GTK_IM_MODULE="gcin"
 export QT_IM_MODULE="gcin"
-gcin &
+pgrep gcin &> /dev/null || gcin &> /dev/null &
 
 pgrep redshift &> /dev/null || redshift &> /dev/null &
+pgrep cairo-dock &> /dev/null || cairo-dock -c &> /dev/null &
 
 exec gnome-session
