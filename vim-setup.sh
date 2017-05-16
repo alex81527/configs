@@ -14,7 +14,7 @@ echo '[~/.vim/plugin/cscope_maps.vim] updated.'
 
 echo 'Installing vim plugins...'
 # Use an empty vimrc to avoid errors before plugins are installed
-touch tmprc
+head -60 ~/.vimrc > tmprc
 vim -u tmprc +PluginInstall +qall
 rm -f tmprc
 
