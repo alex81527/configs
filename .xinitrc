@@ -44,5 +44,6 @@ pgrep gcin &> /dev/null || gcin &> /dev/null &
 
 pgrep redshift &> /dev/null || redshift &> /dev/null &
 pgrep cairo-dock &> /dev/null || cairo-dock -c &> /dev/null &
+pgrep xss-lock &> /dev/null || xss-lock physlock &> /dev/null &
 
 exec gnome-session
