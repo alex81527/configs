@@ -121,6 +121,9 @@ set matchtime=2
 "The last window will have a status line 
 set laststatus=2
 
+"copy/paste between different vim instances
+set clipboard=unnamedplus
+
 nmap <C-k> <PageUp>
 nmap <C-j> <PageDown>
 
