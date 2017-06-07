@@ -88,9 +88,10 @@ set smartindent
 "Width indicator for 72 and 80, auto word wrapping
 "http://vim.wikia.com/wiki/Automatic_word_wrapping
 
-set colorcolumn=72,80
-set textwidth=80
-set formatoptions+=t
+set colorcolumn=73,81
+highlight colorcolumn ctermbg=6
+"set textwidth=80
+"set formatoptions+=t
 
 "Visual code review helper
 set ruler
