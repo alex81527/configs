@@ -23,6 +23,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-scripts/Conque-GDB'
 "Plugin 'kien/ctrlp.vim'
 
 
