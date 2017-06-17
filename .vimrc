@@ -24,6 +24,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/Conque-GDB'
+Plugin 'majutsushi/tagbar'
 "Plugin 'kien/ctrlp.vim'
 
 
@@ -126,23 +127,21 @@ set laststatus=2
 "copy/paste between different vim instances
 set clipboard=unnamedplus
 
+
 nmap <C-k> <PageUp>
 nmap <C-j> <PageDown>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
-"Settings for YouCompleteMe"""""""""""""""""""'"""""""""""""""""""""""""
+"Settings for YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
 "no confirmation for ycm_confirm_extra_conf each time
 let g:ycm_confirm_extra_conf = 0
 "debug info, use :YcmToggleLogs stderr to examine errors
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-
-"Settings for syntastic"""""""""""""""""""""""""""""""""""""""""""""""""
+"Settings for syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -170,12 +169,11 @@ let g:syntastic_python_checkers = ['pylint']
 let g:ycm_show_diagnostics_ui = 0
 "For debugging, set to 0 for not logging
 "let g:syntastic_debug = 3
-"let g:syntastic_debug_file = "~/syntastic_debug"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:syntastic_debug_file = '~/syntastic_debug'
 
 
 
-"Settings for vim-airline"""""""""""""""""""""""""""""""""""""""""""""""
+"Settings for vim-airline
 "This is disabled by default; add the following to your vimrc to enable 
 "the extension:
 let g:airline#extensions#tabline#enabled = 1
@@ -188,10 +186,13 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "Install here: https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
-"Settings for NERDTree""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F2> :NERDTreeToggle<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Settings for NERDTree
+nmap <F2> :NERDTreeToggle<CR>
+
+"Settings for TagBar
+nmap <F3> :TagbarToggle<CR>
+
+
