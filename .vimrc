@@ -25,6 +25,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/Conque-GDB'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-commentary'
 "Plugin 'kien/ctrlp.vim'
 
 
