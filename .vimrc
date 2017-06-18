@@ -27,6 +27,7 @@ Plugin 'vim-scripts/Conque-GDB'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
 Plugin 'yggdroot/indentline'
+Plugin 'Chiel92/vim-autoformat'
 "Plugin 'kien/ctrlp.vim'
 
 
@@ -132,6 +133,9 @@ set clipboard=unnamedplus
 
 nmap <C-k> <PageUp>
 nmap <C-j> <PageDown>
+"Navigate between tabs
+nmap <S-Left> :tabp<CR>
+nmap <S-Right> :tabn<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Settings for YouCompleteMe
@@ -197,4 +201,6 @@ nmap <F2> :NERDTreeToggle<CR>
 "Settings for TagBar
 nmap <F3> :TagbarToggle<CR>
 
+"Settings for AutoFormat
+noremap <F4> :Autoformat<CR>
 
