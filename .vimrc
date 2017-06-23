@@ -75,8 +75,8 @@ set fileencodings=utf-8,big5,default
 
 "Colorscheme
 syntax on
-set background=dark
-colorscheme molokai 
+"set background=dark
+colorscheme wombat 
 
 "Let backspace behaves like most other apps
 "http://vim.wikia.com/wiki/Backspace_and_delete_problems
@@ -193,7 +193,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 "Integrating with powerline fonts
 "Install here: https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
+let g:airline_theme='wombat'
 
 
 
