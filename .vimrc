@@ -28,6 +28,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
 Plugin 'yggdroot/indentline'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 "Plugin 'kien/ctrlp.vim'
 
 
@@ -154,7 +156,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:_on_wq = 0
+let g:syntastic_check_on_wq = 0
 
 "Use this option to specify the height of the location lists syntastic opens
 let g:syntastic_loc_list_height = 7
@@ -163,7 +165,7 @@ let g:syntastic_loc_list_height = 7
 let g:syntastic_c_checkers = ['gcc']
 "for cpp, it defaults to g++, or clang++ if gcc not found
 let g:syntastic_sh_checkers = ['shellcheck']
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['flake8']
 "For python 2.7, let g:syntastic_python_checkers = ['pylint2']
 
 "Syntastic can be used together with the 'YouCompleteMe' Vim plugin (see         
@@ -203,4 +205,9 @@ nmap <F3> :TagbarToggle<CR>
 
 "Settings for AutoFormat
 noremap <F4> :Autoformat<CR>
+
+"Settings for UltiSnip
+let g:UltiSnipsExpandTrigger="<S-y>"
+let g:UltiSnipsJumpForwardTrigger="<S-p>"
+let g:UltiSnipsJumpBackwardTrigger="<S-n>"
 
