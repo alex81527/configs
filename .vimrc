@@ -69,9 +69,10 @@ filetype plugin indent on    " required
 "Custom setting starts from here
 "Using :help to walk through each setting, :help tabstop 
 
-"Can open big5-encoded files automatically
-set fileencoding=utf-8
-set fileencodings=utf-8,big5,default
+"Let vim detect file encodings automatically, if vim can not detect it correctly
+"Use :e ++enc=big5 [++ff=unix] to reopen the file with a specific encoding
+"fileformat can be unix, dos, mac
+
 
 "Colorscheme
 syntax on
@@ -96,7 +97,7 @@ set smartindent
 "http://vim.wikia.com/wiki/Automatic_word_wrapping
 
 set colorcolumn=73,81
-highlight colorcolumn ctermbg=6
+highlight colorcolumn ctermbg=5
 "set textwidth=80
 "set formatoptions+=t
 

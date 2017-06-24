@@ -95,3 +95,4 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias vi=vim
 alias pacman='pacman --color auto'
+alias diff='diff -u --color'
