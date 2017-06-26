@@ -12,8 +12,8 @@
 
 ## Plugin specific configuration  
 ### YouCompleteMe  
-* [Compile the ycm_core library](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64)
-`cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer`  
+* [Compile the ycm_core library](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64)  
+  
 * [Give YCM compile flags to parse your code](https://github.com/Valloric/YouCompleteMe#c-family-semantic-completion)  
     Download sample config from here:  
     `curl -ssL https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py -o ~/.ycm_extra_conf.py`  
