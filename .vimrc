@@ -27,6 +27,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
 Plugin 'yggdroot/indentline'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'davidhalter/jedi-vim'
 "Plugin 'sirver/ultisnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'kien/ctrlp.vim'
@@ -186,7 +187,6 @@ let g:airline#extensions#tabline#enabled = 1
 "how you can define 'straight' tabs:
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
 "Integrating with powerline fonts
 "Install here: https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
@@ -200,6 +200,18 @@ let g:formatdef_my_custom_cpp = '"clang-format -style=google"'
 let g:formatters_cpp = ['my_custom_cpp']
 let g:formatdef_my_custom_py = '"yapf --style google"'
 let g:formatters_python = ['my_custom_py']
+
+"Settings for jedi
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#completions_command = "<C-Space>"
+let g:jedi#rename_command = "<leader>r"
+
+
+
 
 " "Settings for YouCompleteMe
 " let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
