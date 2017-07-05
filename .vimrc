@@ -17,7 +17,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'flazz/vim-colorschemes'
@@ -28,8 +27,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-commentary'
 Plugin 'yggdroot/indentline'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'sirver/ultisnips'
-Plugin 'honza/vim-snippets'
+"Plugin 'sirver/ultisnips'
+"Plugin 'honza/vim-snippets'
 "Plugin 'kien/ctrlp.vim'
 
 
@@ -67,7 +66,7 @@ filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Custom setting starts from here
-"Using :help to walk through each setting, :help tabstop 
+"Using :help to walk through each setting, e.g., :help tabstop 
 
 "Let vim detect file encodings automatically, if vim can not detect it correctly
 "Use :e ++enc=big5 [++ff=unix] to reopen the file with a specific encoding
@@ -77,7 +76,7 @@ filetype plugin indent on    " required
 "Colorscheme
 syntax on
 "set background=dark
-colorscheme wombat 
+colorscheme molokai
 
 "Let backspace behaves like most other apps
 "http://vim.wikia.com/wiki/Backspace_and_delete_problems
@@ -133,23 +132,15 @@ set laststatus=2
 "copy/paste between different vim instances
 set clipboard=unnamedplus
 
-
+"Key bindings
 nmap <C-k> <PageUp>
 nmap <C-j> <PageDown>
-"Navigate between tabs
-nmap <S-Left> :tabp<CR>
-nmap <S-Right> :tabn<CR>
+nmap <silent> <S-Left> :wincmd h<CR>
+nmap <silent> <S-Right> :wincmd l<CR>
+nmap <F2> :NERDTreeToggle<CR>
+nmap <F3> :TagbarToggle<CR>
+noremap <F4> :Autoformat<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"Settings for YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
-"no confirmation for ycm_confirm_extra_conf each time
-let g:ycm_confirm_extra_conf = 0
-"debug info, use :YcmToggleLogs stderr to examine errors
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-
-
 "Settings for syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -158,16 +149,22 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 "Use this option to specify the height of the location lists syntastic opens
 let g:syntastic_loc_list_height = 7
-
 "Set checkers, e.g., let g:syntastic_<filetype>_checkers = ['<checker-name>']
-let g:syntastic_c_checkers = ['gcc']
-"for cpp, it defaults to g++, or clang++ if gcc not found
+let g:syntastic_c_checkers = ['clang_check']
+let g:syntastic_cpp_checkers = ['clang_check']
 let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_python_checkers = ['flake8']
-"For python 2.7, let g:syntastic_python_checkers = ['pylint2']
+"syntastic_<checker>_config: specific configuration for each checker
+let g:syntastic_clang_check_config_file = ".syntastic_clang_check_config"
+" File containing compilation flags (such as defines or include directories),
+" one option per line (cf. |syntastic-config-files|).
+" E.g.
+" -DDEBUG
+" -include ../config.h
+" -I../common
+" -I/usr/include/c++/4.5.3/
 
 "Syntastic can be used together with the 'YouCompleteMe' Vim plugin (see         
 "http://valloric.github.io/YouCompleteMe/). However, by default 'YouCompleteMe'  
@@ -175,11 +172,10 @@ let g:syntastic_python_checkers = ['flake8']
 "filetypes, in order to allow its own checkers to run. If you want to use YCM's  
 "identifier completer but still run syntastic's checkers for those filetypes you 
 "have to set g:ycm_show_diagnostics_ui to 0.  
-let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_show_diagnostics_ui = 0
 "For debugging, set to 0 for not logging
 "let g:syntastic_debug = 3
 "let g:syntastic_debug_file = '~/syntastic_debug'
-
 
 
 "Settings for vim-airline
@@ -197,18 +193,18 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
 
 
-
-"Settings for NERDTree
-nmap <F2> :NERDTreeToggle<CR>
-
-"Settings for TagBar
-nmap <F3> :TagbarToggle<CR>
-
 "Settings for AutoFormat
-noremap <F4> :Autoformat<CR>
+let g:formatdef_my_custom_c = '"clang-format -style=google"'
+let g:formatters_c = ['my_custom_c']
+let g:formatdef_my_custom_cpp = '"clang-format -style=google"'
+let g:formatters_cpp = ['my_custom_cpp']
+let g:formatdef_my_custom_py = '"yapf --style google"'
+let g:formatters_python = ['my_custom_py']
 
-"Settings for UltiSnip
-let g:UltiSnipsExpandTrigger="<S-y>"
-let g:UltiSnipsJumpForwardTrigger="<S-p>"
-let g:UltiSnipsJumpBackwardTrigger="<S-n>"
-
+" "Settings for YouCompleteMe
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'                   
+" "no confirmation for ycm_confirm_extra_conf each time
+" let g:ycm_confirm_extra_conf = 0
+" "debug info, use :YcmToggleLogs stderr to examine errors
+" let g:ycm_server_keep_logfiles = 1
+" let g:ycm_server_log_level = 'debug'
