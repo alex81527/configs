@@ -194,9 +194,9 @@ let g:airline_theme='wombat'
 
 
 "Settings for AutoFormat
-let g:formatdef_my_custom_c = '"clang-format -style=google"'
+let g:formatdef_my_custom_c = '"clang-format -style=\"{BasedOnStyle: google, IndentWidth: 4}\""'
 let g:formatters_c = ['my_custom_c']
-let g:formatdef_my_custom_cpp = '"clang-format -style=google"'
+let g:formatdef_my_custom_cpp = '"clang-format -style=\"{BasedOnStyle: google, IndentWidth: 4}\""'
 let g:formatters_cpp = ['my_custom_cpp']
 let g:formatdef_my_custom_py = '"yapf --style google"'
 let g:formatters_python = ['my_custom_py']
