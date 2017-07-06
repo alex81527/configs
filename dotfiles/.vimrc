@@ -97,7 +97,7 @@ set smartindent
 "http://vim.wikia.com/wiki/Automatic_word_wrapping
 
 set colorcolumn=73,81
-highlight colorcolumn ctermbg=5
+highlight colorcolumn ctermbg=6
 "set textwidth=80
 "set formatoptions+=t
 

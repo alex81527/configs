@@ -2,7 +2,7 @@ echo '================================================================='
 echo 'Setting up Vundle...'
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo 'Fetching .vimrc config file...'
-curl -sSL https://raw.githubusercontent.com/alex81527/configs/master/.vimrc \
+curl -sSL https://raw.githubusercontent.com/alex81527/configs/master/dotfiles/.vimrc \
     -o ~/.vimrc
 echo '[~/.vimrc] updated.'
 
