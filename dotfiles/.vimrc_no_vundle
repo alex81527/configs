@@ -1,0 +1,81 @@
+"Author: W. Alex Chen 
+"Date:   April 15, 2017 UTC+8 
+"Email:  alex81527@gmail.com
+"Github: http://github.com/alex81527
+
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+filetype plugin indent on    " required
+
+
+"Using :help to walk through each setting, e.g., :help tabstop 
+"Let vim detect file encodings automatically, if vim can not detect it correctly
+"Use :e ++enc=big5 [++ff=unix] to reopen the file with a specific encoding
+"fileformat can be unix, dos, mac
+
+
+"Colorscheme
+syntax on
+"set background=dark
+"colorscheme molokai
+
+"Let backspace behaves like most other apps
+"http://vim.wikia.com/wiki/Backspace_and_delete_problems
+set backspace=2
+"set backspace=indent,eol,start
+
+"Tab replaced with 4 spaces, auto indent
+"http://vim.wikia.com/wiki/Indenting_source_code
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set smartindent
+
+"Width indicator for 72 and 80, auto word wrapping
+"http://vim.wikia.com/wiki/Automatic_word_wrapping
+
+set colorcolumn=73,81
+highlight colorcolumn ctermbg=6
+"set textwidth=80
+"set formatoptions+=t
+
+"Visual code review helper
+set ruler
+set number
+"set cursorline   <--vim may respond respond slowly on large file
+"set cursorcolumn
+
+"Improve vim performance on terminals (xterm, rxvt, etc)
+set ttyfast
+set more
+
+"Autoread file when changed from outside
+set autoread
+"
+"Start scrolling when we're 8 lines away from margins
+set scrolloff=8 
+set sidescrolloff=15
+set sidescroll=1
+
+"Highlight & Incremental search
+set hlsearch
+set incsearch
+
+"Show matching brackets
+set showmatch
+"How many tenths of a second to blink when matching brackets
+set matchtime=2
+"The last window will have a status line 
+set laststatus=2
+
+"copy/paste between different vim instances
+set clipboard=unnamedplus
+
+"Key bindings
+nmap <C-k> <PageUp>
+nmap <C-j> <PageDown>
+nmap <silent> <S-Left> :wincmd h<CR>
+nmap <silent> <S-Right> :wincmd l<CR>

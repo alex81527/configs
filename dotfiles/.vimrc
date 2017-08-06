@@ -17,17 +17,17 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/Conque-GDB'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-commentary'
-Plugin 'yggdroot/indentline'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'flazz/vim-colorschemes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-scripts/Conque-GDB'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'tpope/vim-commentary'
+"Plugin 'yggdroot/indentline'
+"Plugin 'Chiel92/vim-autoformat'
+"Plugin 'davidhalter/jedi-vim'
 "Plugin 'sirver/ultisnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'kien/ctrlp.vim'
@@ -77,7 +77,7 @@ filetype plugin indent on    " required
 "Colorscheme
 syntax on
 "set background=dark
-colorscheme molokai
+"colorscheme molokai
 
 "Let backspace behaves like most other apps
 "http://vim.wikia.com/wiki/Backspace_and_delete_problems
